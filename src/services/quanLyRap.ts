@@ -1,3 +1,4 @@
+import { ThongTinLichChieu } from "../@types";
 import { apiInstance } from "../constants";
 
 const api = apiInstance.create({
@@ -6,5 +7,7 @@ const api = apiInstance.create({
 
 export const quanLyRap = {
   getShowtimesById: (query = "") =>
-    api.get<HttpResponse<any>>(`/LayThongTinLichChieuPhim${query}`),
+    api.get<HttpResponse<ThongTinLichChieu>>(
+      `/LayThongTinLichChieuPhim${query}`
+    ),
 };

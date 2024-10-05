@@ -92,7 +92,7 @@ export const HomeTemplate = () => {
                     onClick={() => {
                       const path = generatePath(PATH.filmDetail, {
                         id: phim.maPhim,
-                      }); 
+                      });
                       navigate(path);
                     }}
                   >
@@ -117,13 +117,11 @@ export const HomeTemplate = () => {
         )}
       </div>
 
-
       <p className="font-900 text-30 mt-30 text-center text-slate-800 ">
         Phim đang Chiếu
       </p>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {" "}
-
         {data?.data.content
           ?.filter((item) => !item.dangChieu)
           .slice(0, 4)
@@ -132,7 +130,7 @@ export const HomeTemplate = () => {
               <div key={phim.maPhim} className="flex justify-center mt-4 mb-2">
                 <Card
                   hoverable
-                  className="w-72 bg-gradient-to-r from-gray-800 to-black shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105" 
+                  className="w-72 bg-gradient-to-r from-gray-800 to-black shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105"
                   cover={
                     <img
                       alt="example"
@@ -154,54 +152,82 @@ export const HomeTemplate = () => {
                       </div>
                     }
                   />
+                  <Button
+                    className="mt-10"
+                    onClick={() => {
+                      const path = generatePath(PATH.filmDetail, {
+                        id: phim.maPhim,
+                      });
+                      navigate(path);
+                    }}
+                  >
+                    Đặt vé
+                  </Button>
                 </Card>
               </div>
             );
           })}
       </div>
-
 
       <p className="font-900 text-30 mt-30 text-center text-slate-800 ">
         Phim sắp Chiếu
       </p>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {" "}
-     
         {data?.data.content
           ?.filter((item) => item.dangChieu)
           .slice(0, 4)
           .map((phim) => {
             return (
-              <div key={phim.maPhim} className="flex justify-center mt-4 mb-2">
-                <Card
-                  hoverable
-                  className="w-72 bg-gradient-to-r from-gray-800 to-black shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105" 
-                  cover={
-                    <img
-                      alt="example"
-                      src={phim.hinhAnh}
-                      className="w-full h-[300px] object-cover rounded-lg p-2 border-r-2"
-                    />
-                  }
+              <div>
+                <div
+                  key={phim.maPhim}
+                  className="flex justify-center mt-4 mb-2"
                 >
-                  <Card.Meta
-                    title={
-                      <div
-                        style={{
-                          color: "white",
-                          wordWrap: "break-word",
-                          whiteSpace: "normal",
-                        }}
-                      >
-                        {phim.tenPhim}
-                      </div>
+                  <Card
+                    hoverable
+                    className="w-72 bg-gradient-to-r from-gray-800 to-black shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105"
+                    cover={
+                      <img
+                        alt="example"
+                        src={phim.hinhAnh}
+                        className="w-full h-[300px] object-cover rounded-lg p-2 border-r-2"
+                      />
                     }
-                  />
-                </Card>
+                  >
+                    <Card.Meta
+                      title={
+                        <div
+                          style={{
+                            color: "white",
+                            wordWrap: "break-word",
+                            whiteSpace: "normal",
+                          }}
+                        >
+                          {phim.tenPhim}
+                        </div>
+                      }
+                    />
+                    <Button
+                      className="mt-10"
+                      onClick={() => {
+                        const path = generatePath(PATH.filmDetail, {
+                          id: phim.maPhim,
+                        });
+                        navigate(path);
+                      }}
+                    >
+                      Đặt vé
+                    </Button>
+                  </Card>
+                </div>
               </div>
             );
           })}
       </div>
+      <h1 className="text-red-900 font-900 text-[30px] text-center m-9">
+        __Thanks And See You Again__
+      </h1>
     </div>
   );
 };
