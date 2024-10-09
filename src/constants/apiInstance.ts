@@ -1,4 +1,5 @@
 import axios, { InternalAxiosRequestConfig } from "axios";
+import { user } from "../store/quanLyNguoiDung/user";
 export const apiInstance = {
   create: (setting?: Partial<InternalAxiosRequestConfig>) => {
     const axiosInstance = axios.create();
@@ -11,6 +12,7 @@ export const apiInstance = {
           ...(setting?.headers || {}),
           TokenCybersoft:
             "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5Mb3AiOiJCb290Y2FtcCA2OSIsIkhldEhhblN0cmluZyI6IjAxLzAyLzIwMjUiLCJIZXRIYW5UaW1lIjoiMTczODM2ODAwMDAwMCIsIm5iZiI6MTcxMDUyMjAwMCwiZXhwIjoxNzM4NTE1NjAwfQ.ap-iPzMpXDeCuXH0aJnbbSuR3vIW4upk1nOK3h9D-5g",
+          Authorization: `Bearer ${user?.accessToken}`,
         },
       } as unknown as InternalAxiosRequestConfig;
     });

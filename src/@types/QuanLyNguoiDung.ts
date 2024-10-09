@@ -16,3 +16,12 @@ export type RegisterAPIResponse = {
   maNhom: string;
   hoTen: string;
 };
+
+export type User = {
+  taiKhoan: string;
+  matKhau: string;
+  email: string;
+  soDT: string;
+  maNhom: string;
+  hoTen: string;
+};

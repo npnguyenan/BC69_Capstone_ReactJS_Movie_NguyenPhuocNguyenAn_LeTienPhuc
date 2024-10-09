@@ -155,7 +155,9 @@ export const FilmDetailTemplate = () => {
           </LegendItem>
         </Legend>
         <div className="flex justify-end">
-          <Button className="flex items-center" type="primary">Đặt Vé</Button>
+          <Button className="flex items-center" type="primary">
+            Đặt Vé
+          </Button>
         </div>
       </Modal>
     </Container>
