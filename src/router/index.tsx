@@ -2,8 +2,7 @@ import { useRoutes } from "react-router-dom";
 import { PATH } from "../constants";
 import { FilmDetail, Films, Home, Login, Register, User } from "../pages";
 import { AuthLayout, MainLayout } from "../component";
-import { AdminAuthLayout, AdminMainLayout } from "../component/layouts/admin";
-import { AdminLogin } from "../pages/admin";
+import { AdminMainLayout } from "../component/layouts/admin";
 import {
   AddNewFilmTemplate,
   EditFilmTemplate,
