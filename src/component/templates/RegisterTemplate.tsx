@@ -3,8 +3,6 @@ import { useForm, Controller, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { RegisterSchema, RegisterSchemaType } from "../../schemas";
 
-import { useAppDispatch } from "../../store";
-import { useQuanLyNguoiDungSelector } from "../../store/quanLyNguoiDung/selector";
 // Mutation sử dụng khi thay đổi database (gọi API xóa, sửa, thêm mới)
 
 import { useRegisterMutation } from "../../hooks/api";

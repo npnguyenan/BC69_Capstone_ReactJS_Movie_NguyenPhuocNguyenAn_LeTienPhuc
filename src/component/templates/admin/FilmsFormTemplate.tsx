@@ -3,12 +3,11 @@ import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { InputFilmSchema, InputFilmSchemaType } from "../../../schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import moment from "moment";
-import { useNavigate } from "react-router-dom";
+
 import { useAddFilmMutation } from "../../../hooks/api/useAddFilmMutation";
 
 import { useEffect, useState } from "react";
 import { useQuanLyPhimSelector } from "../../../store/quanLyPhim";
-import { useAppDispatch } from "../../../store";
 import { useUpdateFilmMutation } from "../../../hooks";
 
 type Props = {
