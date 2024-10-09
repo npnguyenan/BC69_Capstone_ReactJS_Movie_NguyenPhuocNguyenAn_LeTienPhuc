@@ -25,15 +25,15 @@ export const routers = () =>
         },
       ],
     },
-    {
-      element: <AdminAuthLayout />,
-      children: [
-        {
-          element: <AdminLogin />,
-          path: PATH.adminLogin,
-        },
-      ],
-    },
+    // {
+    //   element: <AdminAuthLayout />,
+    //   children: [
+    //     {
+    //       element: <AdminLogin />,
+    //       path: PATH.adminLogin,
+    //     },
+    //   ],
+    // },
     {
       element: <MainLayout />,
       children: [
