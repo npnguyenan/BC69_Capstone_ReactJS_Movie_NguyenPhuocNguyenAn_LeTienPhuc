@@ -2,19 +2,11 @@ import { Button, Input } from "antd";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { RegisterSchema, RegisterSchemaType } from "../../schemas";
-// import { Form } from "react-router-dom";
-// import { quanLyNguoiDungServices } from "../../services";
-import { toast } from "react-toastify";
-// import { useState } from "react";
-// import { sleep } from "../../utils";
-// import { useDispatch, useSelector } from "react-redux";
-import { quanLyNguoiDungThunks } from "../../store/quanLyNguoiDung";
-import { RootState, useAppDispatch } from "../../store";
+
+import { useAppDispatch } from "../../store";
 import { useQuanLyNguoiDungSelector } from "../../store/quanLyNguoiDung/selector";
 // Mutation sử dụng khi thay đổi database (gọi API xóa, sửa, thêm mới)
-import { useMutation } from "@tanstack/react-query";
-import { quanLyNguoiDungServices } from "../../services";
-import { sleep } from "../../utils";
+
 import { useRegisterMutation } from "../../hooks/api";
 
 export const RegisterTemplate = () => {
@@ -38,12 +30,10 @@ export const RegisterTemplate = () => {
   const registerMutation = useRegisterMutation();
 
   // tạo dispatch từ useAppDispatch
-  const dispatch = useAppDispatch();
 
   // const { isLoadingRegister } = useSelector(
   //   (state: RootState) => state.quanLyNguoiDungReducer
   // );
-  const { isLoadingRegister } = useQuanLyNguoiDungSelector();
 
   // useForm<RegisterSchemaType>: Định nghĩa kiểu dữ liệu trả về của useForm
   const {

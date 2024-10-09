@@ -1,5 +1,5 @@
-import React, { Fragment, ReactNode } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { Fragment, ReactNode } from "react";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 type Props = {

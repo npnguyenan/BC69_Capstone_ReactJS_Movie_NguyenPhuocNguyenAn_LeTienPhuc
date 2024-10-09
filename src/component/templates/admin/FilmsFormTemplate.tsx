@@ -25,13 +25,11 @@ export const FilmsFormTemplate = (props: Props) => {
     resolver: zodResolver(InputFilmSchema),
     defaultValues: props.value || {},
   });
-  // const [imgUrl, setImgUrl] = useState("");
+
   const { imgUrl } = useQuanLyPhimSelector();
   const [fileHinhAnh, setFileHinhAnh] = useState<File | null>(null);
   let formData = new FormData();
-  const dispatch = useAppDispatch();
 
-  const navigate = useNavigate();
   const addFilmMutation = useAddFilmMutation();
   const updateFilmMutation = useUpdateFilmMutation();
 
