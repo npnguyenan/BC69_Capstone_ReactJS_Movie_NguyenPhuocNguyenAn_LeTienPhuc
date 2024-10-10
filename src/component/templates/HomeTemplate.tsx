@@ -15,7 +15,7 @@ export const HomeTemplate = () => {
     queryKey: ["DanhSachPhim"],
     queryFn: async () => {
       await sleep(1000);
-      return quanLyPhimServices.getDanhSachPhim("?maNhom=GP04");
+      return quanLyPhimServices.getDanhSachPhim("?maNhom=GP01");
     },
     staleTime: 5 * 60 * 1000,
     enabled: true,

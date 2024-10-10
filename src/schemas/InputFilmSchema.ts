@@ -21,7 +21,7 @@ export const InputFilmSchema = z.object({
   hot: z.boolean().default(false),
   dangChieu: z.boolean().default(false),
   sapChieu: z.boolean().default(false),
-  maNhom: z.string().default("GP04"),
+  maNhom: z.string().default("GP01"),
 });
 
 export type InputFilmSchemaType = z.infer<typeof InputFilmSchema>;

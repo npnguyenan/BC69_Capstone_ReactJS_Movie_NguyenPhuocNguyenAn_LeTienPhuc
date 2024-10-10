@@ -29,7 +29,7 @@ export const ListFilmTemplate = () => {
     queryKey: ["DanhSachPhim"],
     queryFn: async () => {
       await sleep(1000 * 1);
-      return quanLyPhimServices.getDanhSachPhim("?maNhom=GP04");
+      return quanLyPhimServices.getDanhSachPhim("?maNhom=GP01");
     },
     staleTime: 5 * 60 * 1000,
     // true:  gọi API, false: ko gọi
